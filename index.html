@@ -6,66 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Cientifica</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="titulo">
-    <h1>Vinicius Roberto</h1>
-    </div>
-    <div class="calculadora">
-        <div class="caixa-r"><p>teste</p></div>
+    <div class="fundo">
+        <div class="titulo">
+        <h1>Vinicius Roberto</h1>
+        </div>
+        <div class="calculadora">
+            <div class="caixa-r"><p>0</p></div>
 
-        <table>
+            <table>
 
-            <tr>
-                <td><button></button></td>
-                <td><button>x!</button></td>
-                <td><button>(</button></td>
-                <td><button>)</button></td>
-                <td><button>%</button></td>
-                <td><button>CE</button></td>
-            </tr>
+                <tr>
+                    <td colspan="1"></td>
+                    <td><button onclick="inserir('!')">x!</button></td>
+                    <td><button onclick="inserir('\(')">(</button></td>
+                    <td><button onclick="inserir(')')">')</button></td>                    
+                    <td><button onclick="inserir('%')">%</button></td> <!-- MESMA COISA QUE DIVIDIR POR 100 o elemento anterior a ele-->
+                    <td><button onclick="limpar()">CE</button></td>
+                    <td><button onclick="apagar()">AC</button></td>
+                </tr>
 
-            <tr>
-                <td><button>Inv</button></td>
-                <td><button>Sin</button></td>
-                <td><button>In</button></td>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-                <td><button>9</button></td>
-                <td><button>÷</button></td>
-            </tr>
+                <tr>
+                    <td></td>
+                    <td><button>Sin</button></td>
+                    <td><button>In</button></td>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>÷</button></td>
+                </tr>
 
-            <tr>
-                <td><button>÷</button></td>
-                <td><button>Cos</button></td>
-                <td><button>Log</button></td>
-                <td><button>4</button></td>
-                <td><button>5</button></td>
-                <td><button>6</button></td>
-                <td><button>x</button></td>
-            </tr>
+                <tr>
+                    <td><button>÷</button></td>
+                    <td><button>Cos</button></td>
+                    <td><button>Log</button></td>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>x</button></td>
+                </tr>
 
-            <tr>
-                <td><button>e</button></td>
-                <td><button>Tan</button></td>
-                <td><button>√</button></td>
-                <td><button>1</button></td>
-                <td><button>2</button></td>
-                <td><button>3</button></td>
-                <td><button>-</button></td>
-            </tr>
+                <tr>
+                    <td><button>e</button></td>
+                    <td><button>Tan</button></td>
+                    <td><button>√</button></td>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>-</button></td>
+                </tr>
 
-            <tr>
-                <td><button>Ans</button></td>
-                <td><button>EXP</button></td>
-                <td><button>x^y</button></td>
-                <td><button>0</button></td>
-                <td><button>.</button></td>
-                <td><button>=</button></td>
-                <td><button>+</button></td>
-            </tr>
-        </table>
-    </div>
+                <tr>
+                    <td><button>Ans</button></td>
+                    <td><button>EXP</button></td>
+                    <td><button>x^y</button></td>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button id="ingual">=</button></td>
+                    <td><button>+</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>    
 
     
 </body>
