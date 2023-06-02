@@ -40,6 +40,7 @@
     height: 500px;  
     flex-wrap: wrap;
     margin-top: -130px;
+    border-radius: 20px;
 }
 
 .caixa-r{
