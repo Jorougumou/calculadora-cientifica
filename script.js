@@ -1,7 +1,7 @@
 
-
+var contador = 0
 var calculo = ''
-var resquicio_verdadeirob = ''
+var resquicio_verdadeirob = 'valor inicial'
 
 
 
@@ -21,7 +21,7 @@ function inserirn(num1)
 }
 
 
-function inserirpi()
+function inserirpi(num1)
 
 
     {calculo = calculo + '3.14'
@@ -31,7 +31,12 @@ function inserirpi()
     document.getElementById('resultado').innerHTML = resquicio + num1
 }
 
-
+function e()
+{
+    let resquicio = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = resquicio + 'e'
+    calculo = calculo + '2.71828.'
+}
 
 
 
@@ -156,7 +161,7 @@ function elevado()
 }
 
 
-function e()
+function exp()
 {
     let resquicio = document.getElementById('resultado').innerHTML
     document.getElementById('resultado').innerHTML = resquicio + 'E'
@@ -165,7 +170,7 @@ function e()
 
 function ans()
 {
-    if (calculo = '')
+    if (calculo == '')
     {calculo = resquicio_verdadeirob
     document.getElementById('resultado').innerHTML = calculo
     }
@@ -176,6 +181,11 @@ function ans()
     }
 }
 
+function logn()
+{
+    document.getElementById('resultado').innerHTML = (Math.log(eval(calculo)))
+    calculo = (Math.log2(eval(calculo)))
+}
 
 
 
@@ -218,10 +228,24 @@ function apagadowow()
 
     calculo = calculo.substring(0,calculo.length -1)
 
-
 }
 
+function inverter()
+{
+    let tabelan = document.getElementById('tabela')
+    let tabelai = document.getElementById('tabela_invertida')
+    contador++
+    if (contador % 2 == 0)
+    {
+        tabelan.classList.add('aparecido')
+        tabelai.classList.remove('aparecido')
 
+    }
 
+    if (contador % 2 == 1)
+    {
+        tabelai.classList.add('aparecido')
+        tabelan.classList.remove('aparecido')
 
-
+    }
+}

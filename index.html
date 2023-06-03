@@ -16,11 +16,10 @@
         <div class="calculadora">
             <div class="caixa-r"><p id="resultado"></p></div>
 
-            <table>
+            <table id="tabela" class="aparecido">
 
                 <tr>
-                    <td colspan="1"></td>
-                    <td><button onclick="fatorial()">x!</button></td>
+                    <td colspan="2"><button class="col-2" onclick="fatorial()">x!</button></td>
                     <td><button onclick='abrirp("(")'>(</button></td>
                     <td><button onclick="fecharp(')')">)</button></td>                    
                     <td><button onclick="porcentagem()">%</button></td> <!-- MESMA COISA QUE DIVIDIR POR 100 o elemento anterior a ele-->
@@ -29,23 +28,23 @@
                 </tr>
 
                 <tr>
-                    <td></td>
+                    <td><button onclick="inverter()">Inv</button></td>
                     <td><button onclick="sin()">Sin</button></td>
-                    <td><button>In</button></td>
+                    <td><button onclick="logn()">In</button></td>
                     <td><button onclick="inserirn('7')">7</button></td>
                     <td><button onclick="inserirn('8')">8</button></td>
                     <td><button onclick="inserirn('9')">9</button></td>
-                    <td><button onclick="inseriro('÷')">÷</button></td>
+                    <td><button class="operacao" onclick="inseriro('÷')">÷</button></td>
                 </tr>
 
                 <tr>
-                    <td><button onclick="inserirpi()">π</button></td>
+                    <td><button onclick="inserirpi('π')">π</button></td>
                     <td><button onclick="cos()">Cos</button></td>
                     <td><button onclick="log()">Log</button></td>
                     <td><button onclick="inserirn('4')">4</button></td>
                     <td><button onclick="inserirn('5')">5</button></td>
                     <td><button onclick="inserirn('6')">6</button></td>
-                    <td><button onclick="inseriro('x')">x</button></td>
+                    <td><button class="operacao" onclick="inseriro('x')">x</button></td>
                 </tr>
 
                 <tr>
@@ -55,19 +54,79 @@
                     <td><button onclick="inserirn('1')">1</button></td>
                     <td><button onclick="inserirn('2')">2</button></td>
                     <td><button onclick="inserirn('3')">3</button></td>
-                    <td><button onclick="inseriro('-')">-</button></td>
+                    <td><button class="operacao" onclick="inseriro('-')">-</button></td>
                 </tr>
 
                 <tr>
                     <td><button onclick="ans()">Ans</button></td>
-                    <td><button>EXP</button></td>
+                    <td><button onclick="exp()">EXP</button></td>
                     <td><button onclick="elevado()">x^y</button></td>
                     <td><button onclick="inserirn('0')">0</button></td>
                     <td><button onclick="inserirn('.')">.</button></td>
                     <td><button id="ingual" onclick="calcular() ">=</button></td>
-                    <td><button onclick="inseriro('+')">+</button></td>
+                    <td><button class="operacao" onclick="inseriro('+')">+</button></td>
                 </tr>
             </table>
+
+
+
+
+
+
+
+
+
+            <table id="tabela_invertida">
+
+                <tr>
+                    <td colspan="2"><button class="col-2" onclick="fatorial()">x!</button></td>
+                    <td><button onclick='abrirp("(")'>(</button></td>
+                    <td><button onclick="fecharp(')')">)</button></td>                    
+                    <td><button onclick="porcentagem()">%</button></td>  
+                    <td><button onclick="apagadowow()">CE</button></td>
+                    <td><button onclick="apagar()">AC</button></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="inverter()">Inv</button></td>
+                    <td><button class="botao_invertido" onclick="sin()">Sin^-1</button></td>
+                    <td><button class="botao_invertido" onclick="logn()">e^x</button></td>
+                    <td><button onclick="inserirn('7')">7</button></td>
+                    <td><button onclick="inserirn('8')">8</button></td>
+                    <td><button onclick="inserirn('9')">9</button></td>
+                    <td><button class='operacao'onclick="inseriro('÷')">÷</button></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="inserirpi('π')">π</button></td>
+                    <td><button class="botao_invertido" onclick="cos()">Cos^-1</button></td>
+                    <td><button class="botao_invertido" onclick="log()">2^x</button></td>
+                    <td><button onclick="inserirn('4')">4</button></td>
+                    <td><button onclick="inserirn('5')">5</button></td>
+                    <td><button onclick="inserirn('6')">6</button></td>
+                    <td><button class="operacao" onclick="inseriro('x')">x</button></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="e()">e</button></td>
+                    <td><button class="botao_invertido" onclick="tan()">Tan^-1</button></td>
+                    <td><button class="botao_invertido" onclick="raiz()">x^2</button></td>
+                    <td><button onclick="inserirn('1')">1</button></td>
+                    <td><button onclick="inserirn('2')">2</button></td>
+                    <td><button onclick="inserirn('3')">3</button></td>
+                    <td><button class="operacao" onclick="inseriro('-')">-</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="botao_invertido" onclick="ans()">Rnd</button></td>
+                    <td><button onclick="exp()">EXP</button></td>
+                    <td><button class="botao_invertido" onclick="elevado()">y√x</button></td>
+                    <td><button onclick="inserirn('0')">0</button></td>
+                    <td><button onclick="inserirn('.')">.</button></td>
+                    <td><button id="ingual" onclick="calcular() ">=</button></td>
+                    <td><button class="operacao" onclick="inseriro('+')">+</button></td>
+                </tr>
+            </table> 
         </div>
     </div>    
 

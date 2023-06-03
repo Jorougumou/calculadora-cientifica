@@ -66,6 +66,7 @@ table{
     width: 450px;
     height:400px;
     margin: auto;
+    display: none;
 }
 
 tr{
@@ -101,4 +102,26 @@ button:active{
 
 #ingual:active{
     background-color: rgb(0, 72, 131);
+}
+
+.operacao{
+
+    background-color: rgb(210, 71, 21);
+    color: black;
+}
+
+.operacao:hover{
+    background-color: rgb(162, 55, 16);
+}
+
+.col-2{
+    width: 125px;
+}
+
+.aparecido{
+    display: table;
+}
+
+.botao_invertido{
+    font-size: 16px;
 }
