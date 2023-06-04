@@ -6,7 +6,7 @@
 
 
 .fundo{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     flex-wrap: wrap;
     display: flex; 
@@ -124,4 +124,28 @@ button:active{
 
 .botao_invertido{
     font-size: 16px;
+}
+
+
+@media (max-width:520px)
+{
+button{
+    width: 33px;
+    height: 50px;
+    }
+
+.col-2{
+    width: 76px;
+}
+
+.calculadora{
+    width: 300px;
+    margin-top:0;
+    height: 400px;
+}
+
+table{
+    width: 280px;
+    height:300px;
+}
 }

@@ -35,7 +35,7 @@ function e()
 {
     let resquicio = document.getElementById('resultado').innerHTML
     document.getElementById('resultado').innerHTML = resquicio + 'e'
-    calculo = calculo + '2.71828.'
+    calculo = calculo + '2.71828'
 }
 
 
@@ -113,7 +113,7 @@ function porcentagem()
 function sin()
 {
 
-
+ 
     document.getElementById('resultado').innerHTML = (Math.sin(eval(calculo)))
     calculo = (Math.sin(eval(calculo)))
 
@@ -142,7 +142,7 @@ function tan()
 function log()
 {
     document.getElementById('resultado').innerHTML = (Math.log(eval(calculo)))
-    calculo = (Math.log2(eval(calculo)))
+    calculo = (Math.log10(eval(calculo)))
 }
 
 
@@ -187,9 +187,56 @@ function logn()
     calculo = (Math.log2(eval(calculo)))
 }
 
+function sininv()
+{
+    document.getElementById('resultado').innerHTML = ((Math.sin(eval(calculo)))**-1)
+    calculo = ((Math.sin(eval(calculo)))**-1)
+}
 
+function cosinv()
+{
+    calculo = ((Math.cos(eval(calculo)))**-1)
+    document.getElementById('resultado').innerHTML = calculo
+}
 
+function taninv()
+{
+    calculo = ((Math.tan(eval(calculo)))**-1)
+    document.getElementById('resultado').innerHTML = calculo
+}
 
+function elevadox()
+{   let resquicio = document.getElementById('resultado').innerHTML 
+    document.getElementById('resultado').innerHTML = resquicio + 'e^'
+    calculo = calculo + '2.71828**'
+}
+
+function elevado10()
+{
+    let resquicio = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = resquicio + '10^'
+    calculo = calculo + '10**'
+}
+
+function aoquadrado()
+{
+    calculo = calculo **2
+    document.getElementById('resultado').innerHTML = calculo 
+}
+
+function raiz()
+{
+    calculo = calculo +'**1/'
+    document.getElementById('resultado').innerHTML = calculo
+}
+
+function aleatorio()
+{
+       let numeroAleatorio = Math.random(); 
+    numeroAleatorio = numeroAleatorio.toString()
+    calculo = calculo + numeroAleatorio
+    document.getElementById('resultado').innerHTML = calculo
+}
 
 
 
