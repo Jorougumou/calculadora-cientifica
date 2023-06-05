@@ -2,6 +2,7 @@
 var contador = 0
 var calculo = ''
 var resquicio_verdadeirob = 'valor inicial'
+var estado_operacao = false
 
 
 
@@ -17,6 +18,9 @@ function inserirn(num1)
 
     document.getElementById('resultado').innerHTML = resquicio + num1
 
+    if (estado_operacao == true)
+    {estado_operacao = false
+    }
 
 }
 
@@ -29,6 +33,9 @@ function inserirpi(num1)
 
     let resquicio = document.getElementById('resultado').innerHTML
     document.getElementById('resultado').innerHTML = resquicio + num1
+
+    if (estado_operacao == true)
+        {estado_operacao = false}
 }
 
 function e()
@@ -47,8 +54,8 @@ function e()
 
 function inseriro(operacao)
 {
- 
-        let resquicio = document.getElementById('resultado').innerHTML
+        if (estado_operacao === false)
+        {let resquicio = document.getElementById('resultado').innerHTML
         document.getElementById('resultado').innerHTML = resquicio + operacao //frontend
        
         if (operacao == 'x')
@@ -57,7 +64,8 @@ function inseriro(operacao)
         {calculo = calculo + operacao}
         if (operacao == '÷')
         {calculo = calculo + '/'}
-
+        estado_operacao = true
+}
 
 
 
@@ -69,7 +77,7 @@ function inseriro(operacao)
 
 
 function abrirp(ap)
-{
+{   
     let resquicio = document.getElementById('resultado').innerHTML
     document.getElementById('resultado').innerHTML = resquicio + ap
 
@@ -79,9 +87,9 @@ function abrirp(ap)
 
 
 function fecharp(fp)
-{
-    let resquicio = document.getElementById('resultado').innerHTML
-    document.getElementById('resultado').innerHTML = resquicio + fp
+{   if (estado_operacao === false)
+{    let resquicio = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = resquicio + fp}
 }
 
 
@@ -252,7 +260,8 @@ function calcular()
 {
     calculo = eval(calculo)
     document.getElementById('resultado').innerHTML = calculo
-
+    if (estado_operacao == true)
+    {estado_operacao = false}
 }
 
 
@@ -269,6 +278,10 @@ function apagadowow()
 {
     let resquicio = document.getElementById('resultado').innerHTML
     document.getElementById('resultado').innerHTML = resquicio.substring(0,resquicio.length -1)
+    if (estado_operacao === true)
+    {
+        estado_operacao = false
+    }
 
 
 
